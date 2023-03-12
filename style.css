@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(232, 232, 232);
+}
+
+.container:hover .arrow {
+    opacity: 1;
+    transition: 0.8s;
+    display: block;
+    width: 5%;
+}
+
+.container_One {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    background-color: rgb(232, 232, 232);
+}
+
+.accordion {
+    border-top: solid 0.2em;
+    border-color: rgb(185, 183, 252);
+}
+
+.accordion:hover .picture {
+    max-height: 20em;
+}
+
+.accordion:hover .arrow,
+.input:checked~.label .arrow {
+    transform: rotate(180deg);
+}
+
+.accordion:hover .label {
+    transition: all 0.8s ease-in;
+    background-color: aqua;
+}
+
+.input:checked~.label {
+    transition: all 0.8s ease-in;
+    background-color: rgb(206, 255, 255);
+}
+
+.input:hover~.label {
+    text-decoration: line-through;
+    transition: all 0.8s ease-in;
+    color: rgb(255, 109, 109);
+}
+
+.input:checked~.label {
+    text-decoration: underline;
+    transition: all 0.8s ease-in;
+    color: blue;
+}
+
+.input:checked~.picture {
+    transition: all;
+    max-height: 20em;
+}
+
+.mems {
+    width: 40%;
+    display: block;
+}
+
+.mems:hover {
+    transition: all 0.5s ease-in;
+    width: 45%
+}
+
+label {
+    padding: 0.4em 0;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.8s ease-in;
+}
+
+.arrow {
+    opacity: 0;
+    width: 5%;
+}
