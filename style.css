@@ -2,6 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 820px) {
+    * {
+        color: brown;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    * {
+        color: rgb(255, 0, 0);
+        font-size: 0.95em;
+    }
 }
 
 .input {
@@ -25,6 +40,10 @@
     width: 5%;
 }
 
+.container:hover {
+    cursor: cell;
+}
+
 .container_One {
     display: flex;
     flex-direction: column;
@@ -39,6 +58,10 @@
 .accordion {
     border-top: solid 0.2em;
     border-color: rgb(185, 183, 252);
+}
+
+.accordion:hover label {
+    cursor: cell;
 }
 
 .accordion:hover .picture {
@@ -84,6 +107,13 @@
 
 .mems:hover {
     transition: all 0.5s ease-in;
+    width: 45%;
+    cursor: pointer;
+}
+
+.mems:active {
+    transition: all 0.5s ease-in;
+    opacity: 0.5;
     width: 45%
 }
 
